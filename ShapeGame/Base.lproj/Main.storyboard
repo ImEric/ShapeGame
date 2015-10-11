@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KQW-YK-cnj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -16,39 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="697-9E-qga">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEW-j8-BKW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="triangle" translatesAutoresizingMaskIntoConstraints="NO" id="tEc-hX-caE">
-                                <rect key="frame" x="63" y="171" width="71" height="64"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square" translatesAutoresizingMaskIntoConstraints="NO" id="shY-Cb-cEt">
-                                <rect key="frame" x="68" y="243" width="61" height="60"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="04D-PD-9N8">
-                                <rect key="frame" x="63" y="316" width="69" height="72"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SWIPE LEFT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w82-A8-9gF">
-                                <rect key="frame" x="202" y="192" width="99" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Im6-PT-6D9">
-                                <rect key="frame" x="241" y="348" width="33" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zv-9a-wEn">
+                                <color key="backgroundColor" red="0.12545375631313127" green="0.12545375631313127" blue="0.12545375631313127" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zv-9a-wEn">
                                 <rect key="frame" x="129" y="428" width="117" height="63"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="Z8V-pf-hC5"/>
+                                    <constraint firstAttribute="height" constant="63" id="zKe-PX-DTV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,21 +37,23 @@
                                     <segue destination="BV1-FR-VrT" kind="show" id="D3C-M6-75f"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SWIPE RIGHT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qu9-ql-2ev">
-                                <rect key="frame" x="202" y="262" width="111" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="instruction" translatesAutoresizingMaskIntoConstraints="NO" id="Hbh-aA-uwf">
+                                <rect key="frame" x="42" y="119" width="291" height="301"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Zv-9a-wEn" firstAttribute="centerX" secondItem="goH-DT-UrB" secondAttribute="centerX" id="B7j-8D-JzE"/>
+                            <constraint firstItem="2Zv-9a-wEn" firstAttribute="centerX" secondItem="Hbh-aA-uwf" secondAttribute="centerX" id="GcM-Qr-EEA"/>
+                            <constraint firstItem="6Um-kV-sB7" firstAttribute="top" secondItem="2Zv-9a-wEn" secondAttribute="bottom" constant="176" id="I4N-xM-k7c"/>
+                            <constraint firstItem="2Zv-9a-wEn" firstAttribute="top" secondItem="Hbh-aA-uwf" secondAttribute="bottom" constant="8" symbolic="YES" id="MHe-ql-Oo3"/>
+                            <constraint firstItem="Hbh-aA-uwf" firstAttribute="leading" secondItem="goH-DT-UrB" secondAttribute="leadingMargin" constant="43" id="cgX-2H-q4D"/>
+                            <constraint firstItem="Hbh-aA-uwf" firstAttribute="top" secondItem="It2-XJ-cWy" secondAttribute="bottom" constant="99" id="hqr-nQ-VQU"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="backgroundView" destination="697-9E-qga" id="day-EP-3Tz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5r-gt-5r0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,9 +80,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="750" height="1334"/>
-        <image name="circle" width="90" height="90"/>
-        <image name="square" width="90" height="90"/>
-        <image name="triangle" width="90" height="90"/>
+        <image name="instruction" width="2480" height="2480"/>
     </resources>
 </document>

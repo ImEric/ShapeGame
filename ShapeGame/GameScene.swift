@@ -39,10 +39,10 @@ class GameScene: SKScene {
         
         
         
-        timeLabel.fontSize = 100
+        timeLabel.fontSize = 80
         timeLabel.fontColor = SKColor.whiteColor()
         timeLabel.text =   "60"
-        timeLabel.fontSize = 40
+        timeLabel.fontSize = 30
         
         print(size.height)
         timeLabel.position = CGPointMake(frame.size.width / 4 * 3, frame.size.height * 0.95)
@@ -77,7 +77,7 @@ class GameScene: SKScene {
         scoreLabel.fontSize = 100
         scoreLabel.fontColor = SKColor.whiteColor()
         scoreLabel.text =   "SCORE: 0"
-        scoreLabel.fontSize = 40
+        scoreLabel.fontSize = 30
         
         print(size.height)
         scoreLabel.position = CGPointMake(frame.size.width / 4, frame.size.height * 0.95)
